@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
+import translations from '../translations';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ language }) => {
   return (
     <section className="hero-section">
       <div className="hero-container">
@@ -15,13 +16,15 @@ const Hero = () => {
             className="hero-content"
           >
             <h1 className="hero-title">
-              Transform Your{' '}
-              <span className="hero-title-highlight">Digital Presence</span>
+              {language === 'he' ? 'הפוך את הנוכחות הדיגיטלית שלך' : 'Transform Your '}
+              <span className="hero-title-highlight">
+                {language === 'he' ? 'לדיגיטלית' : 'Digital Presence'}
+              </span>
             </h1>
             <p className="hero-desc">
-              We help businesses create stunning digital experiences that drive
-              growth and engagement. Our team of experts delivers innovative
-              solutions tailored to your needs.
+              {language === 'he'
+                ? 'אנחנו עוזרים לעסקים ליצור חוויות דיגיטליות מרהיבות שמניעות צמיחה ומעורבות. הצוות שלנו מספק פתרונות חדשניים המותאמים לצרכים שלך.'
+                : 'We help businesses create stunning digital experiences that drive growth and engagement. Our team of experts delivers innovative solutions tailored to your needs.'}
             </p>
             <div className="hero-actions">
               <motion.button
@@ -29,7 +32,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="hero-btn hero-btn-primary"
               >
-                Get Started
+                {language === 'he' ? 'התחל עכשיו' : 'Get Started'}
                 <FiArrowRight />
               </motion.button>
               <motion.button
@@ -37,7 +40,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="hero-btn hero-btn-secondary"
               >
-                Learn More
+                {language === 'he' ? 'למידע נוסף' : 'Learn More'}
               </motion.button>
             </div>
           </motion.div>
@@ -53,7 +56,7 @@ const Hero = () => {
               {/* Placeholder for hero image/illustration */}
               <div className="hero-image-placeholder">
                 <div className="hero-image-text">
-                  Hero Image
+                  {language === 'he' ? 'תמונת גיבור' : 'Hero Image'}
                 </div>
               </div>
             </div>

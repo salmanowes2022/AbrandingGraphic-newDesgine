@@ -55,6 +55,11 @@
   min-width: 200%;
 }
 
+.app-root.rtl .categories-nav,
+.app-root.rtl .categories-track {
+  direction: ltr;
+}
+
 @media (max-width: 900px) {
   .categories-nav {
     padding: 16px 4px;

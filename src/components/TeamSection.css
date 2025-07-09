@@ -183,4 +183,7 @@
     padding: 16px;
     margin-bottom: 20px;
   }
+  .team-row.team-row-mobile-reverse {
+    flex-direction: column-reverse;
+  }
 } 

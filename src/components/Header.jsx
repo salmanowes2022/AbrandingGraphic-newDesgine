@@ -1,7 +1,8 @@
 import './Header.css';
 import logo from '../assets/logo.png';
+import React from 'react';
 
-const Header = () => {
+const Header = ({ language, toggleLanguage }) => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
@@ -18,7 +19,9 @@ const Header = () => {
       {/* Navigation */}
       <div className="header-nav">
         {/* Language Switcher */}
-        <div className="header-lang">עב</div>
+        <button className="header-lang" onClick={toggleLanguage}>
+          {language === 'en' ? 'עב' : 'EN'}
+        </button>
       </div>
     </header>
   );
