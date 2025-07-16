@@ -72,7 +72,6 @@
 }
 
 .contact-socials {
-  display: flex;
   flex-direction: column;
   margin-top: auto;
   gap: 6px;
@@ -166,12 +165,8 @@
 .contact-lets-talk-badge, .contact-lets-talk-phone { display: none !important; }
 
 .contact-info-social-row {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
   max-width: 314px;
-  margin: 8px auto 0 auto;
   width: 100%;
   gap: 0;
 }
@@ -265,7 +260,7 @@
     align-items: flex-start;
   }
   .contact-info {
-    margin: 0;
+  margin-top: 100px;
     gap: 4px;
   }
   .contact-socials {
