@@ -81,19 +81,23 @@
 }
 
 .app-contact-btn {
-  display: block;
-  margin: 0 auto 48px auto;
   background: #111;
   color: #fff;
-  font-size: 0.85rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  padding: 8px 0;
+  width: 327px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
-  border-radius: 0;
+  border-radius: 8px;
+  margin: 40px auto 0 auto;
+  display: block;
+  text-align: center;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: normal;
   cursor: pointer;
   transition: opacity 0.2s;
+  font-family: 'Rag Sans-1.4', 'Inter', 'Montserrat', Arial, sans-serif;
 }
 
 .app-contact-btn:hover {
