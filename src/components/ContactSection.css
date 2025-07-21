@@ -3,10 +3,10 @@
   width: 100%;
   max-width: 1900px;
   margin: 0 auto;
-  min-height: 90vh;
+  min-height: 60vh;
   background: #fff;
   font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-  border-top: 1px solid rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.855);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -115,6 +115,7 @@
   width: 100%;
   max-width: 314px;
   margin: 0 auto;
+  margin-top: 52px;
   background: none;
   box-shadow: none;
   padding: 0;

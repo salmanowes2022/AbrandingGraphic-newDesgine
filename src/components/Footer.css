@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: space-between;
   font-size: 10px;
+  font-family: sem;
   color: rgba(0,0,0,0.6);
   padding: 16px;
-  border-top: 1px solid rgba(0,0,0,0.1);
   margin-top: 32px;
   box-sizing: border-box;
 }

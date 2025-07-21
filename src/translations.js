@@ -26,7 +26,7 @@ const translations = {
       message: 'MESSAGE',
       send: 'SEND',
     },
-    footerLeft: '© 2024 A. GRAPHICS. ALL RIGHTS RESERVED.',
+    footerLeft: '© 2025 A. GRAPHICS. ALL RIGHTS RESERVED.',
     footerRight: 'PRIVACY & TERMS',
   },
   he: {
@@ -55,7 +55,7 @@ const translations = {
       message: 'הודעה',
       send: 'שלח',
     },
-    footerLeft: '© 2024 כל הזכויות שמורות.',
+    footerLeft: '© 2025 כל הזכויות שמורות.',
     footerRight: 'תנאי שימוש ופרטיות',
   }
 };

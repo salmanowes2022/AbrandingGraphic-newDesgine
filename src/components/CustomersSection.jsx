@@ -4,7 +4,7 @@ const customers = [
   ['PANGO', 'TRULLION', 'ELAL', 'PENLINK', 'RISE'],
   ['ISRAEL HAYOM', 'BITUACH YASHIR', 'PRIMIS'],
   ['BANK HAPOALIM', 'YELLOW', 'BANK JERUSALEM'],
-  ['BERESHIT HOTEL', 'HASBARA']
+  ['ISROTEL', 'HASBARA']
 ];
 
 const CustomersSection = () => (
