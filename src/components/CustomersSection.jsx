@@ -19,7 +19,8 @@ const CustomersSectionHeadline = styled.div`
   margin-bottom: 32px;
   text-align: left;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 `;
@@ -66,7 +67,8 @@ const CustomersTitle = styled.h2`
 
 const CustomersList = styled.div`
   font-size: 3rem;
-  font-weight: 300;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   text-align: center;
   line-height: 1.3;
 
@@ -91,6 +93,8 @@ const CustomersRow = styled.div`
 const CustomersName = styled.span`
   display: inline-block;
   margin: 0 12px 4px 12px;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
 
   @media (max-width: 900px) {
     margin: 0 6px 2px 6px;

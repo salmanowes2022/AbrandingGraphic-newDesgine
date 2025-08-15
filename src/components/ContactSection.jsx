@@ -8,7 +8,8 @@ const ContactSectionContainer = styled.div`
   margin: 0 auto;
   min-height: 60vh;
   background: #fff;
-  font-family: "Inter", "Montserrat", Arial, sans-serif;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   border-top: 1px solid rgba(0, 0, 0, 0.855);
   display: flex;
   flex-direction: column;
@@ -53,7 +54,7 @@ const ContactTitle = styled.h2`
   text-transform: uppercase;
   margin-right: 75%;
   line-height: 1.05;
-  font-family: inherit;
+  font-family: "RagSans", sans-serif;
 
   @media (max-width: 1200px) {
     font-size: 3rem;
@@ -96,12 +97,12 @@ const ContactInput = styled.input`
   font-size: 1.15rem;
   border-radius: 8px;
   width: 100%;
-  font-family: inherit;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   box-sizing: border-box;
   background: #fff;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  font-weight: 300;
 
   @media (max-width: 900px) {
     border: 1.5px solid #111;
@@ -109,7 +110,7 @@ const ContactInput = styled.input`
     font-size: 1rem;
     border-radius: 5px;
     width: 100%;
-    font-family: inherit;
+    font-family: "RagSans", sans-serif;
     box-sizing: border-box;
     background: #fff;
     text-transform: uppercase;
@@ -123,7 +124,7 @@ const ContactInput = styled.input`
     font-size: 1rem;
     border-radius: 5px;
     width: 100%;
-    font-family: inherit;
+    font-family: "RagSans", sans-serif;
     box-sizing: border-box;
     background: #fff;
     text-transform: uppercase;
@@ -138,12 +139,12 @@ const ContactTextarea = styled.textarea`
   font-size: 1.15rem;
   border-radius: 8px;
   width: 100%;
-  font-family: inherit;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   box-sizing: border-box;
   background: #fff;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  font-weight: 300;
   resize: vertical;
   min-height: 110px;
 
@@ -153,7 +154,7 @@ const ContactTextarea = styled.textarea`
     font-size: 1rem;
     border-radius: 5px;
     width: 100%;
-    font-family: inherit;
+    font-family: "RagSans", sans-serif;
     box-sizing: border-box;
     background: #fff;
     text-transform: uppercase;
@@ -169,7 +170,7 @@ const ContactTextarea = styled.textarea`
     font-size: 1rem;
     border-radius: 5px;
     width: 100%;
-    font-family: inherit;
+    font-family: "RagSans", sans-serif;
     box-sizing: border-box;
     background: #fff;
     text-transform: uppercase;
@@ -185,7 +186,8 @@ const ContactButton = styled.button`
   color: #fff;
   padding: 20px 0;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   border: none;
@@ -236,6 +238,8 @@ const ContactSuccessMessage = styled.div`
   color: green;
   text-align: center;
   margin-top: 12px;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
 `;
 
 const ContactInfoSocialRow = styled.div`
@@ -302,7 +306,7 @@ const ContactLabel = styled.div`
   text-transform: uppercase;
   margin-bottom: 0;
   letter-spacing: 0.04em;
-  font-family: inherit;
+  font-family: "RagSans", sans-serif;
 `;
 
 const ContactSocials = styled.div`
@@ -347,7 +351,7 @@ const ContactSocial = styled.div`
   text-transform: uppercase;
   color: #111;
   letter-spacing: 0.04em;
-  font-family: inherit;
+  font-family: "RagSans", sans-serif;
 `;
 
 const ContactSection = ({ language }) => {

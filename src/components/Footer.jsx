@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import translations from '../translations';
+import styled from "styled-components";
+import translations from "../translations";
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -7,7 +7,8 @@ const FooterContainer = styled.footer`
   align-items: center;
   justify-content: space-between;
   font-size: 10px;
-  font-family: sem;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   color: rgba(0, 0, 0, 0.6);
   padding: 16px;
   margin-top: 32px;
@@ -35,6 +36,9 @@ const FooterLeft = styled.div`
 `;
 
 const FooterRight = styled.div`
+  font-family: "RagSans", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 13px;
   @media (max-width: 600px) {
     width: 100%;
     text-align: left;
@@ -48,4 +52,4 @@ const Footer = ({ language }) => (
   </FooterContainer>
 );
 
-export default Footer; 
+export default Footer;

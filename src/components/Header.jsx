@@ -24,8 +24,8 @@ const StyledHeader = styled.header`
 
 const HeaderLogo = styled.div`
   font-size: 2rem;
-  font-family: serif;
-  font-weight: 300;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   letter-spacing: -0.02em;
   user-select: none;
 

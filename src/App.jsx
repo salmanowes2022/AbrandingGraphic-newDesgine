@@ -15,7 +15,8 @@ const AppRoot = styled.div`
   min-height: 100vh;
   background: #fff;
   color: #111;
-  font-family: "Inter", sans-serif;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   display: flex;
   flex-direction: column;
 

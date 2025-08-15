@@ -11,7 +11,8 @@ const TeamSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 64px;
-  font-family: "Inter", sans-serif;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
 
   @media (max-width: 900px) {
     gap: 32px;
@@ -133,7 +134,7 @@ const TeamBadge = styled.div`
     justify-content: center;
     align-items: flex-start;
     padding-left: 24px;
-    font-family: "Rag Sans-1.4", "Inter", "Montserrat", Arial, sans-serif;
+    font-family: "RagSans", sans-serif;
     right: 0;
     left: unset;
     top: 57%;

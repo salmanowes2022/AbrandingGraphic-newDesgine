@@ -50,7 +50,8 @@ const HeroContent = styled(motion.div)`
 
 const HeroTitle = styled.h1`
   font-size: 2.5rem;
-  font-weight: bold;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   margin-bottom: 24px;
   line-height: 1.1;
 
@@ -69,6 +70,8 @@ const HeroTitle = styled.h1`
 
 const HeroTitleHighlight = styled.span`
   color: #3b82f6;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
 `;
 
 const HeroDesc = styled.p`
@@ -105,7 +108,8 @@ const HeroBtn = styled(motion.button)`
   gap: 8px;
   padding: 14px 32px;
   font-size: 1rem;
-  font-weight: 500;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -176,7 +180,8 @@ const HeroImagePlaceholder = styled.div`
 
 const HeroImageText = styled.div`
   font-size: 2rem;
-  font-weight: bold;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   color: #3b82f688;
 
   @media (max-width: 900px) {

@@ -44,7 +44,8 @@ const CategoriesTrack = styled.div`
   align-items: center;
   white-space: nowrap;
   font-size: 1.25rem;
-  font-weight: 300;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   gap: 0;

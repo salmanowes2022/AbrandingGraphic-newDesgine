@@ -37,7 +37,8 @@ const NavbarRow = styled.div`
 
 const NavbarBrand = styled(motion.div)`
   font-size: 2rem;
-  font-weight: bold;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   color: #3B82F6;
 
   @media (max-width: 900px) {
@@ -67,6 +68,8 @@ const NavbarLink = styled(motion.a)`
   color: #1F2937;
   text-decoration: none;
   font-size: 1rem;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   transition: color 0.2s;
 
   &:hover {
@@ -85,7 +88,8 @@ const NavbarLink = styled(motion.a)`
 const NavbarBtn = styled(motion.button)`
   padding: 10px 24px;
   font-size: 1rem;
-  font-weight: 500;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -149,6 +153,8 @@ const NavbarMobileLink = styled.a`
   color: #1F2937;
   text-decoration: none;
   font-size: 1rem;
+  font-family: "RagSans", sans-serif;
+  font-weight: 600;
   transition: color 0.2s;
   display: block;
 
