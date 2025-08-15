@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import translations from '../translations';
+import React, { useState } from "react";
+import styled from "styled-components";
+import translations from "../translations";
 
 const ContactSectionContainer = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ const ContactSectionContainer = styled.div`
   margin: 0 auto;
   min-height: 60vh;
   background: #fff;
-  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  font-family: "Inter", "Montserrat", Arial, sans-serif;
   border-top: 1px solid rgba(0, 0, 0, 0.855);
   display: flex;
   flex-direction: column;
@@ -47,7 +47,8 @@ const ContactTitleWrapper = styled.div`
 
 const ContactTitle = styled.h2`
   font-size: 3rem;
-  font-weight: 200;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200; /* ExtraLight */
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-right: 75%;
@@ -295,6 +296,7 @@ const ContactInfo = styled.div`
 
 const ContactLabel = styled.div`
   font-weight: 600;
+  font-family: "RagSans", sans-serif;
   font-size: 1rem;
   text-align: left;
   text-transform: uppercase;
@@ -309,6 +311,7 @@ const ContactSocials = styled.div`
   gap: 6px;
   margin-bottom: 24px;
   font-weight: 600;
+  font-family: "RagSans", sans-serif;
   text-align: right;
   width: 50%;
   font-size: 1rem;
@@ -338,6 +341,7 @@ const ContactSocials = styled.div`
 
 const ContactSocial = styled.div`
   font-weight: 600;
+  font-family: "RagSans", sans-serif;
   font-size: 1rem;
   text-align: left;
   text-transform: uppercase;
@@ -348,10 +352,10 @@ const ContactSocial = styled.div`
 
 const ContactSection = ({ language }) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [success, setSuccess] = useState(false);
 
@@ -360,7 +364,7 @@ const ContactSection = ({ language }) => {
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -412,7 +416,9 @@ const ContactSection = ({ language }) => {
         </ContactButton>
         {success && (
           <ContactSuccessMessage>
-            {language === 'he' ? 'ההודעה נשלחה בהצלחה!' : 'Message sent successfully!'}
+            {language === "he"
+              ? "ההודעה נשלחה בהצלחה!"
+              : "Message sent successfully!"}
           </ContactSuccessMessage>
         )}
       </ContactForm>
@@ -423,9 +429,7 @@ const ContactSection = ({ language }) => {
         </ContactInfo>
         <ContactSocials>
           {socials.map((social) => (
-            <ContactSocial key={social}>
-              {social}
-            </ContactSocial>
+            <ContactSocial key={social}>{social}</ContactSocial>
           ))}
         </ContactSocials>
       </ContactInfoSocialRow>

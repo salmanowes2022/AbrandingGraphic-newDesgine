@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import translations from '../translations';
-import png1 from '../assets/png1.png';
-import png2 from '../assets/png2.png';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import translations from "../translations";
+import png1 from "../assets/png1.png";
+import png2 from "../assets/png2.png";
 
 const TeamSectionContainer = styled.section`
   width: 100%;
@@ -11,7 +11,7 @@ const TeamSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 64px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 
   @media (max-width: 900px) {
     gap: 32px;
@@ -101,7 +101,8 @@ const TeamBadge = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding-left: 24px;
-  font-family: 'Rag Sans-1.4', 'Inter', 'Montserrat', Arial, sans-serif;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200; /* ExtraLight */
   right: 0;
   left: unset;
   top: 57%;
@@ -132,7 +133,7 @@ const TeamBadge = styled.div`
     justify-content: center;
     align-items: flex-start;
     padding-left: 24px;
-    font-family: 'Rag Sans-1.4', 'Inter', 'Montserrat', Arial, sans-serif;
+    font-family: "Rag Sans-1.4", "Inter", "Montserrat", Arial, sans-serif;
     right: 0;
     left: unset;
     top: 57%;
@@ -149,7 +150,8 @@ const TeamBadge = styled.div`
 
 const TeamBadgePhone = styled.span`
   font-size: 1.2rem;
-  font-weight: 400;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200; /* ExtraLight */
 
   @media (max-width: 900px) {
     font-size: 1rem;
@@ -161,8 +163,8 @@ const TeamBadgePhone = styled.span`
 `;
 
 const TeamTitle = styled.h2`
-  font-family: 'Rag Sans-1.4', 'Inter', 'Montserrat', Arial, sans-serif;
-  font-weight: 200;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200; /* ExtraLight */
   font-style: ExtraLight;
   font-size: 30px;
   line-height: 40px;
@@ -192,7 +194,8 @@ const TeamPhilosophy = styled.div`
 
 const TeamPhilosophyTitle = styled.h3`
   font-size: 1.5rem;
-  font-weight: 400;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200; /* ExtraLight */
   text-transform: uppercase;
   letter-spacing: 0.04em;
   line-height: 1.3;
@@ -220,32 +223,35 @@ const TeamSection = ({ language }) => {
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 600);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const descAlignClass = language === 'he' ? '' : 'team-desc-align-right';
-  const badgeAlignClass = language === 'he' ? '' : 'team-badge-align-right';
+  const descAlignClass = language === "he" ? "" : "team-desc-align-right";
+  const badgeAlignClass = language === "he" ? "" : "team-badge-align-right";
 
   return (
     <TeamSectionContainer>
       {isMobile ? (
         <>
           <TeamBadge className={badgeAlignClass}>
-            {translations[language].teamBadge}<br />
+            {translations[language].teamBadge}
+            <br />
             <TeamBadgePhone>{translations[language].teamPhone}</TeamBadgePhone>
           </TeamBadge>
           <TeamCollage>
             <TeamCollageImg src={png1} alt="team" />
           </TeamCollage>
-          <TeamDesc className={descAlignClass}> 
+          <TeamDesc className={descAlignClass}>
             <TeamTitle>{translations[language].teamTitle}</TeamTitle>
           </TeamDesc>
           <TeamCollage>
             <TeamCollageImg src={png2} alt="philosophy" />
           </TeamCollage>
           <TeamPhilosophy>
-            <TeamPhilosophyTitle>{translations[language].teamPhilosophy}</TeamPhilosophyTitle>
+            <TeamPhilosophyTitle>
+              {translations[language].teamPhilosophy}
+            </TeamPhilosophyTitle>
           </TeamPhilosophy>
         </>
       ) : (
@@ -256,15 +262,20 @@ const TeamSection = ({ language }) => {
             </TeamCollage>
             <TeamDesc className={descAlignClass}>
               <TeamBadge className={badgeAlignClass}>
-                {translations[language].teamBadge}<br />
-                <TeamBadgePhone>{translations[language].teamPhone}</TeamBadgePhone>
+                {translations[language].teamBadge}
+                <br />
+                <TeamBadgePhone>
+                  {translations[language].teamPhone}
+                </TeamBadgePhone>
               </TeamBadge>
               <TeamTitle>{translations[language].teamTitle}</TeamTitle>
             </TeamDesc>
           </TeamRow>
           <TeamRow>
             <TeamPhilosophy>
-              <TeamPhilosophyTitle>{translations[language].teamPhilosophy}</TeamPhilosophyTitle>
+              <TeamPhilosophyTitle>
+                {translations[language].teamPhilosophy}
+              </TeamPhilosophyTitle>
             </TeamPhilosophy>
             <TeamCollage>
               <TeamCollageImg src={png2} alt="philosophy" />
@@ -276,4 +287,4 @@ const TeamSection = ({ language }) => {
   );
 };
 
-export default TeamSection; 
+export default TeamSection;

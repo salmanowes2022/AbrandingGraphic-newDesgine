@@ -77,6 +77,7 @@ const HeroDesc = styled.p`
   margin-bottom: 32px;
   max-width: 600px;
   font-weight: 200;
+  font-family: "RagSans", sans-serif;
 
   @media (max-width: 900px) {
     font-size: 1rem;

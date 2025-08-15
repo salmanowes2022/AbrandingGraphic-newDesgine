@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const customers = [
-  ['PANGO', 'TRULLION', 'ELAL', 'PENLINK', 'RISE'],
-  ['ISRAEL HAYOM', 'BITUACH YASHIR', 'PRIMIS'],
-  ['BANK HAPOALIM', 'YELLOW', 'BANK JERUSALEM'],
-  ['ISROTEL', 'HASBARA']
+  ["PANGO", "TRULLION", "ELAL", "PENLINK", "RISE"],
+  ["ISRAEL HAYOM", "BITUACH YASHIR", "PRIMIS"],
+  ["BANK HAPOALIM", "YELLOW", "BANK JERUSALEM"],
+  ["ISROTEL", "HASBARA"],
 ];
 
 const CustomersSectionContainer = styled.section`
@@ -45,7 +45,8 @@ const CustomersSection = styled.section`
 
 const CustomersTitle = styled.h2`
   font-size: 2.5rem;
-  font-weight: 200;
+  font-family: "RagSans", sans-serif;
+  font-weight: 200; /* ExtraLight */
   margin-bottom: 32px;
   text-transform: uppercase;
   margin-right: 20px;
@@ -111,7 +112,8 @@ const CustomersSectionComponent = () => (
           <CustomersRow key={i}>
             {group.map((name, idx) => (
               <CustomersName key={name}>
-                {name}{idx !== group.length - 1 ? ',' : ''}
+                {name}
+                {idx !== group.length - 1 ? "," : ""}
               </CustomersName>
             ))}
           </CustomersRow>
@@ -121,4 +123,4 @@ const CustomersSectionComponent = () => (
   </CustomersSectionContainer>
 );
 
-export default CustomersSectionComponent; 
+export default CustomersSectionComponent;
