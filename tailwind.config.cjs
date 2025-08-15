@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        rag: ['RagSans', 'sans-serif'],
       },
     },
   },
