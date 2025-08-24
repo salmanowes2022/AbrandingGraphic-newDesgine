@@ -5,6 +5,7 @@ import png1 from "../assets/png1.png";
 import png2 from "../assets/png2.png";
 
 const TeamSectionContainer = styled.section`
+  position: relative;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto 96px auto;
@@ -91,11 +92,14 @@ const TeamDesc = styled.div`
 `;
 
 const TeamBadge = styled.div`
+  position: absolute;
+  top: 0;
+  right: -60px;
   width: 218px;
   height: 90px;
-  background: #9a9a9a;
+  background: #000;
   color: #fff;
-  border-radius: 20px 0 0 20px;
+  border-radius: 12px 0 0 12px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
@@ -103,49 +107,50 @@ const TeamBadge = styled.div`
   align-items: flex-start;
   padding-left: 24px;
   font-family: "RagSans", sans-serif;
-  font-weight: 200; /* ExtraLight */
-  right: 0;
-  left: unset;
-  top: 57%;
-  transform: translateY(-20%);
-  transform: translateX(-40%);
+  font-weight: 600;
   z-index: 1000;
+  cursor: pointer;
+  transition: background 0.2s;
 
-  &.team-badge-align-right {
-    align-self: flex-end;
-    margin-left: auto;
-
-    @media (max-width: 900px) {
-      align-self: flex-start;
-      margin-left: 0;
-      margin-right: -259px;
-    }
+  &:hover {
+    background: #333;
   }
 
+  @media (min-width: 1400px) {
+    right: calc((100vw - 1280px) / 2 - 60px);
+  }
+ @media (min-width: 1800px) {
+    right: calc((100vw - 1680px) / 2 - 60px);
+  }
   @media (max-width: 900px) {
+    right: -40px;
     width: 190px;
     height: 70px;
-    background: #9a9a9a;
-    color: #fff;
-    border-radius: 20px 0 0 20px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 24px;
-    font-family: "RagSans", sans-serif;
-    right: 0;
-    left: unset;
-    top: 57%;
-    transform: translateY(-20%);
-    transform: translateX(-40%);
-    z-index: 1000;
+    padding-left: 20px;
   }
 
-  @media (max-width: 600px) {
-    font-size: 0.9rem;
-    padding: 6px 10px;
+  @media (max-width: 428px) {
+    right: -30px;
+    width: 180px;
+    height: 65px;
+    font-size: 0.85rem;
+    padding-left: 20px;
+  }
+
+  @media (max-width: 393px) {
+    right: -20px;
+    width: 170px;
+    height: 60px;
+    font-size: 0.8rem;
+    padding-left: 18px;
+  }
+
+  @media (max-width: 375px) {
+    right: -10px;
+    width: 160px;
+    height: 55px;
+    font-size: 0.75rem;
+    padding-left: 16px;
   }
 `;
 
@@ -158,8 +163,16 @@ const TeamBadgePhone = styled.span`
     font-size: 1rem;
   }
 
-  @media (max-width: 600px) {
-    font-size: 0.9rem;
+  @media (max-width: 428px) {
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 393px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 0.75rem;
   }
 `;
 
@@ -233,13 +246,14 @@ const TeamSection = ({ language }) => {
 
   return (
     <TeamSectionContainer>
+      <TeamBadge>
+        LET'S TALK
+        <br />
+        <TeamBadgePhone>+972 524513388</TeamBadgePhone>
+      </TeamBadge>
+      
       {isMobile ? (
         <>
-          <TeamBadge className={badgeAlignClass}>
-            {translations[language].teamBadge}
-            <br />
-            <TeamBadgePhone>{translations[language].teamPhone}</TeamBadgePhone>
-          </TeamBadge>
           <TeamCollage>
             <TeamCollageImg src={png1} alt="team" />
           </TeamCollage>
@@ -262,13 +276,6 @@ const TeamSection = ({ language }) => {
               <TeamCollageImg src={png1} alt="team" />
             </TeamCollage>
             <TeamDesc className={descAlignClass}>
-              <TeamBadge className={badgeAlignClass}>
-                {translations[language].teamBadge}
-                <br />
-                <TeamBadgePhone>
-                  {translations[language].teamPhone}
-                </TeamBadgePhone>
-              </TeamBadge>
               <TeamTitle>{translations[language].teamTitle}</TeamTitle>
             </TeamDesc>
           </TeamRow>

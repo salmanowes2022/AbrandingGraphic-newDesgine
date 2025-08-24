@@ -13,7 +13,15 @@ const HeroSection = styled.section`
     padding-top: 40px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 428px) {
+    padding-top: 32px;
+  }
+
+  @media (max-width: 393px) {
+    padding-top: 24px;
+  }
+
+  @media (max-width: 375px) {
     padding-top: 16px;
   }
 `;
@@ -25,8 +33,16 @@ const HeroContainer = styled.div`
   padding: 0 24px;
   box-sizing: border-box;
 
-  @media (max-width: 600px) {
-    padding: 0 4px;
+  @media (max-width: 428px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 393px) {
+    padding: 0 12px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0 8px;
   }
 `;
 
@@ -63,8 +79,16 @@ const HeroTitle = styled.h1`
     font-size: 2rem;
   }
 
-  @media (max-width: 600px) {
-    font-size: 1.2rem;
+  @media (max-width: 428px) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 393px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 1.25rem;
   }
 `;
 
@@ -87,8 +111,19 @@ const HeroDesc = styled.p`
     margin-bottom: 20px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 428px) {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 393px) {
     font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 0.85rem;
+    margin-bottom: 14px;
   }
 `;
 
@@ -115,9 +150,19 @@ const HeroBtn = styled(motion.button)`
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 
-  @media (max-width: 600px) {
+  @media (max-width: 428px) {
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
+
+  @media (max-width: 393px) {
     font-size: 0.9rem;
-    padding: 8px 12px;
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 0.85rem;
+    padding: 8px 16px;
     border-radius: 6px;
   }
 `;
@@ -153,7 +198,15 @@ const HeroImageWrapper = styled(motion.div)`
     height: 220px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 428px) {
+    height: 180px;
+  }
+
+  @media (max-width: 393px) {
+    height: 150px;
+  }
+
+  @media (max-width: 375px) {
     height: 120px;
   }
 `;
@@ -188,7 +241,15 @@ const HeroImageText = styled.div`
     font-size: 1.2rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 428px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 393px) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 375px) {
     font-size: 0.8rem;
   }
 `;
