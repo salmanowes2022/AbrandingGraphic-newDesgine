@@ -9,6 +9,7 @@ import TeamSection from "./components/TeamSection";
 import CustomersSection from "./components/CustomersSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import FloatingTalkButton from "./components/FloatingTalkButton";
 import translations from "./translations";
 
 const AppRoot = styled.div`
@@ -150,6 +151,7 @@ function App() {
         </AppMain>
         <Footer language={language} />
       </AppRoot>
+      <FloatingTalkButton language={language} />
     </>
   );
 }

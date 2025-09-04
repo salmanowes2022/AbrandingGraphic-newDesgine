@@ -79,6 +79,22 @@ const GlobalStyles = createGlobalStyle`
   .btn-secondary:hover {
     background: rgba(16, 185, 129, 0.9);
   }
+
+  /* Pulse Animation for Floating Button */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 `;
 
 export default GlobalStyles;

@@ -28,6 +28,7 @@ const translations = {
     },
     footerLeft: '© 2025 A. GRAPHICS. ALL RIGHTS RESERVED.',
     footerRight: 'PRIVACY & TERMS',
+    floatingChatMessage: 'Want to talk about your project?',
   },
   he: {
     introTitle: 'היי, אנחנו סטודיו לעיצוב גרפי ותכנות.\nמתמחים במיתוג, דיגיטל, פרינט ושילוט',
@@ -57,6 +58,7 @@ const translations = {
     },
     footerLeft: '© 2025 כל הזכויות שמורות.',
     footerRight: 'תנאי שימוש ופרטיות',
+    floatingChatMessage: 'רוצה לדבר על הפרויקט שלך?',
   }
 };
 
