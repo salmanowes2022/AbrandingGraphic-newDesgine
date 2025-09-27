@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const StyledHeader = styled.header`
@@ -28,6 +29,9 @@ const HeaderLogo = styled.div`
   font-weight: 600;
   letter-spacing: -0.02em;
   user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   @media (max-width: 900px) {
     font-size: 1.2rem;
@@ -50,6 +54,38 @@ const HeaderLogoImg = styled.img`
   @media (max-width: 600px) {
     height: 24px;
   }
+`;
+
+const HeaderNavTabs = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0;
+`;
+
+const NavTab = styled.button`
+  font-family: "RagSans";
+  font-weight: 200;
+  font-size: 50px;
+  color: ${(props) => (props.active ? "#000000" : "#BEBCBC")};
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #000000;
+  }
+`;
+
+const NavSeparator = styled.span`
+  font-family: "RagSans";
+  font-weight: 200;
+  font-size: 50px;
+  color: #bebcbc;
+  margin-right: 10px;
+  user-select: none;
 `;
 
 const HeaderNav = styled.div`
@@ -95,11 +131,39 @@ const HeaderLang = styled.button`
 `;
 
 const Header = ({ language, toggleLanguage }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isNotRoot = location.pathname !== "/";
+
+  const handleNavigation = (path) => {
+    if (path) {
+      navigate(path);
+    }
+  };
+
   return (
     <StyledHeader>
       {/* Logo/Brand */}
       <HeaderLogo>
         <HeaderLogoImg src={logo} alt="Logo" />
+        {isNotRoot && (
+          <HeaderNavTabs>
+            <NavTab
+              active={location.pathname === "/home"}
+              onClick={() => handleNavigation("/home")}
+            >
+              WORKS
+            </NavTab>
+            <NavSeparator>,</NavSeparator>
+            <NavTab active={false} onClick={() => handleNavigation()}>
+              COSTUMERS
+            </NavTab>
+            <NavSeparator>,</NavSeparator>
+            <NavTab active={false} onClick={() => handleNavigation()}>
+              CONTACT
+            </NavTab>
+          </HeaderNavTabs>
+        )}
       </HeaderLogo>
       {/* Navigation */}
       <HeaderNav>
