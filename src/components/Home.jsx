@@ -25,21 +25,95 @@ const AppRoot = styled.div`
 const HeroText = styled.h1`
   font-family: "RagSans";
   font-weight: 200;
-  font-size: 111px;
-  line-height: 105px;
+  font-size: 111px; /* 1920px and above */
   text-align: center;
   color: #000;
+  padding: 0 62px;
+
+  @media (max-width: 1728px) {
+    font-size: 100px;
+  }
+
+  @media (max-width: 1512px) {
+    font-size: 87.41px;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 83px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 74px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 834px) {
+    font-size: 76.45px;
+    text-align: left;
+    padding: 0 35px 80px 35px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 39.42px;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 35.75px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 33px;
+  }
 `;
 
 const WorksTitle = styled.div`
   font-family: "RagSans";
   font-weight: 200;
-  line-height: 90px;
-  font-size: 90px;
+  font-size: 90px; /* 1920px and above */
   color: #000;
   text-align: start;
   border-bottom: 1px solid #000;
   padding-left: 100px;
+
+  @media (max-width: 1728px) {
+    font-size: 81.05px;
+  }
+
+  @media (max-width: 1512px) {
+    font-size: 70.88px;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 67.5px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 834px) {
+    font-size: 115.83px;
+    padding-left: 30px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 59.72px;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 54.17px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 50px;
+  }
 `;
 
 const WorksContainer = styled.div`
@@ -48,6 +122,14 @@ const WorksContainer = styled.div`
   margin-top: 15px;
   margin-left: 40px;
   margin-right: 40px;
+
+  @media (max-width: 834px) {
+    flex-direction: column;
+    gap: 51px;
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 `;
 
 const WorkImage = styled.img`
