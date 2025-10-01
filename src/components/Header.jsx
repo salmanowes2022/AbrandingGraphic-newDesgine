@@ -298,11 +298,17 @@ const Header = ({ language, toggleLanguage }) => {
                 WORKS
               </NavTab>
               <NavSeparator>,</NavSeparator>
-              <NavTab active={false} onClick={() => handleNavigation()}>
-                COSTUMERS
+              <NavTab
+                active={location.pathname === "/customers"}
+                onClick={() => handleNavigation("/customers")}
+              >
+                CUSTOMERS
               </NavTab>
               <NavSeparator>,</NavSeparator>
-              <NavTab active={false} onClick={() => handleNavigation()}>
+              <NavTab
+                active={location.pathname === "/contact"}
+                onClick={() => handleNavigation("/contact")}
+              >
                 CONTACT
               </NavTab>
             </HeaderNavTabs>
@@ -331,10 +337,16 @@ const Header = ({ language, toggleLanguage }) => {
             >
               WORKS
             </MobileNavTab>
-            <MobileNavTab active={false} onClick={() => handleNavigation()}>
-              COSTUMERS
+            <MobileNavTab
+              active={location.pathname === "/customers"}
+              onClick={() => handleNavigation("/customers")}
+            >
+              CUSTOMERS
             </MobileNavTab>
-            <MobileNavTab active={false} onClick={() => handleNavigation()}>
+            <MobileNavTab
+              active={location.pathname === "/contact"}
+              onClick={() => handleNavigation("/contact")}
+            >
               CONTACT
             </MobileNavTab>
           </MobileMenuContent>

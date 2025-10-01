@@ -5,6 +5,8 @@ import Landing from "./components/Landing";
 import Home from "./components/Home";
 import Seat from "./components/Seat";
 import Skiner from "./components/Skiner";
+import Customers from "./components/Customers";
+import Contact from "./components/Contact";
 
 function App() {
   const [language, setLanguage] = useState("en");
@@ -38,6 +40,18 @@ function App() {
             path="/skiner"
             element={
               <Skiner language={language} toggleLanguage={toggleLanguage} />
+            }
+          />
+          <Route
+            path="/customers"
+            element={
+              <Customers language={language} toggleLanguage={toggleLanguage} />
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Contact language={language} toggleLanguage={toggleLanguage} />
             }
           />
         </Routes>
