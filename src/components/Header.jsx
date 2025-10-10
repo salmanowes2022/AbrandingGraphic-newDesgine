@@ -269,7 +269,7 @@ const MobileNavSeparator = styled.span`
 const Header = ({ language, toggleLanguage }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const isNotRoot = location.pathname !== "/";
+  const isNotRoot = location.pathname == "/" && location.pathname !== "/lp" &&location.pathname == "/word" &&location.pathname == "/customers" && location.pathname !== "/contact" ? false : true;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleNavigation = (path) => {
@@ -292,8 +292,8 @@ const Header = ({ language, toggleLanguage }) => {
           <>
             <HeaderNavTabs className="desktop-nav">
               <NavTab
-                active={location.pathname === "/home"}
-                onClick={() => handleNavigation("/home")}
+                active={location.pathname === "/"}
+                onClick={() => handleNavigation("/")}
               >
                 WORKS
               </NavTab>
@@ -332,8 +332,8 @@ const Header = ({ language, toggleLanguage }) => {
         <MobileMenuPopup isOpen={isMobileMenuOpen} onClick={toggleMobileMenu}>
           <MobileMenuContent onClick={(e) => e.stopPropagation()}>
             <MobileNavTab
-              active={location.pathname === "/home"}
-              onClick={() => handleNavigation("/home")}
+              active={location.pathname === "/"}
+              onClick={() => handleNavigation("/")}
             >
               WORKS
             </MobileNavTab>

@@ -21,13 +21,13 @@ function App() {
           <Route
             path="/"
             element={
-              <Landing language={language} toggleLanguage={toggleLanguage} />
+              <Home language={language} toggleLanguage={toggleLanguage} />
             }
           />
           <Route
-            path="/home"
+            path="/lp"
             element={
-              <Home language={language} toggleLanguage={toggleLanguage} />
+              <Landing language={language} toggleLanguage={toggleLanguage} />
             }
           />
           <Route

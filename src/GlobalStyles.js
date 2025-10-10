@@ -34,10 +34,12 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 200;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='black' stroke-width='2'/><circle cx='11' cy='12' r='1.5' fill='black'/><circle cx='21' cy='12' r='1.5' fill='black'/><path d='M 10 18 Q 16 24 22 18' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/></svg>") 16 16, auto;
   }
 
   * {
     box-sizing: border-box;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='black' stroke-width='2'/><circle cx='11' cy='12' r='1.5' fill='black'/><circle cx='21' cy='12' r='1.5' fill='black'/><path d='M 10 18 Q 16 24 22 18' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/></svg>") 16 16, auto;
   }
 
   #root {
@@ -59,7 +61,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 500;
     transition: all 0.2s;
     border: none;
-    cursor: pointer;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='black' stroke-width='2'/><circle cx='11' cy='12' r='1.5' fill='black'/><circle cx='21' cy='12' r='1.5' fill='black'/><path d='M 10 18 Q 16 24 22 18' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/></svg>") 16 16, pointer;
   }
   
   .btn-primary {
